@@ -5,7 +5,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 	dumb-init \
 	make \
 	python3-sphinx \
-	rstcheck
+	rstcheck \
+	zip
 
 RUN echo "**** cleanup ****" && \
 	apt-get clean -y; \
