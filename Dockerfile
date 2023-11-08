@@ -14,4 +14,5 @@ RUN echo "**** cleanup ****" && \
 		/var/lib/apt/lists/* \
 		/var/tmp/*
 
-ENTRYPOINT ["dumb-init", "--", "bash"]
+ENTRYPOINT ["dumb-init", "--"]
+CMD /bin/bash
