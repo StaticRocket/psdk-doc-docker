@@ -6,8 +6,10 @@ A simple docker container to build
 
 ## Why
 
-Preempting incompatibility as that entire repos is based on deprecated sphinx
-calls and weird hacks.
+Preempting incompatibility as that repos is still using some deprecated sphinx
+calls. Sphinx has some dependency resolution issues when mixing system and local
+python library installations that causes unusual artifacts. This guarantees a
+reproducible build output.
 
 
 ## Building
