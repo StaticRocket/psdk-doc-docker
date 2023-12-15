@@ -8,6 +8,11 @@ RUN \
 		python3-sphinx \
 		rstcheck \
 		zip && \
+	echo "**** create abc user and make our folders ****" && \
+	useradd -u 1000 -U -d /config -s /bin/false abc && \
+	usermod -G users abc && \
+	mkdir /build && chown abc:abc /build && \
+	mkdir /config && chown abc:abc /config && \
 	echo "**** cleanup ****" && \
 	apt-get autoremove && \
 	apt-get clean && \
@@ -17,5 +22,11 @@ RUN \
 		/var/tmp/* \
 		/var/log/*
 
-ENTRYPOINT ["dumb-init", "--"]
+COPY root/ /
+RUN chown root:root /init && \
+	chmod +x /init
+
+WORKDIR /build
+
+ENTRYPOINT ["/init"]
 CMD /bin/bash
