@@ -7,14 +7,15 @@ RUN \
 		make \
 		python3-sphinx \
 		rstcheck \
-		zip
-
-RUN echo "**** cleanup ****" && \
-	apt-get clean -y; \
+		zip && \
+	echo "**** cleanup ****" && \
+	apt-get autoremove && \
+	apt-get clean && \
 	rm -rf \
 		/tmp/* \
 		/var/lib/apt/lists/* \
-		/var/tmp/*
+		/var/tmp/* \
+		/var/log/*
 
 ENTRYPOINT ["dumb-init", "--"]
 CMD /bin/bash
