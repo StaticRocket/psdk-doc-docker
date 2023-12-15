@@ -10,15 +10,22 @@ Preempting incompatibility as that entire repos is based on deprecated sphinx
 calls and weird hacks.
 
 
-## Usage
+## Building
 
 You need podman or docker for building. If either one of those is already
-installed then just run `make`. The container invocation works differently
-between those tools though.
+installed then just run `make`.
 
 
-### Podman
+## Usage
+
+New tooling has unified the invocation of Podman and Docker by fetching the
+owner of the build directory and remapping an internal user to satisfy build
+requirements. It will fail if the directory owner is in a reserved uid/gid
+region.
+
+After starting the container with your preferred container tool, follow the
+instructions for building the documentation as usual.
 
 ```bash
-podman run -it --rm -v /arc:/arc --user "$(id -u)":"$(id -g)" --userns=keep-id ti/psdk-doc-docker
+docker run -it --rm -v "$PWD":/build ghcr.io/staticrocket/psdk-doc-docker
 ```
