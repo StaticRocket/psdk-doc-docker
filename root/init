@@ -30,8 +30,8 @@ if NEW_GID=$(get_build_gid) && NEW_UID=$(get_build_uid); then
 	fi
 
 	# change the uid and gid of abc otherwise
-	[ "$NEW_GID" != "$(id -u abc)" ] && groupmod -g "${NEW_GID}" abc
-	[ "$NEW_UID" != "$(id -g abc)" ] && usermod -u "${NEW_UID}" abc
+	[ "$NEW_GID" != "$(id -g abc)" ] && groupmod -g "${NEW_GID}" abc
+	[ "$NEW_UID" != "$(id -u abc)" ] && usermod -u "${NEW_UID}" abc
 else
 	echo "Not able to detect UID/GID for remapping!"
 fi
