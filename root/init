@@ -39,5 +39,5 @@ fi
 if [ "$(id -u)" == "$(id -u abc)" ]; then
 	exec dumb-init -- "$@"
 else
-	exec dumb-init -- su abc -s /bin/bash --session-command "$@"
+	exec dumb-init -- gosu abc "$@"
 fi

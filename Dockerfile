@@ -4,6 +4,7 @@ RUN apt-get update \
 	&& DEBIAN_FRONTEND=noninteractive apt-get install -y \
 		--no-install-recommends \
 		dumb-init \
+		gosu \
 		make \
 		python3-sphinx \
 		rstcheck \
