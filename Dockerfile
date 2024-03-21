@@ -27,6 +27,7 @@ RUN chown root:root /init \
 	&& chmod +x /init
 
 WORKDIR /build
+VOLUME /build
 
 ENTRYPOINT ["/init"]
 CMD /bin/bash
