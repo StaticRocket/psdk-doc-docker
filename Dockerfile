@@ -27,8 +27,6 @@ RUN apt-get update \
 		/var/tmp/*
 
 COPY root/ /
-RUN chown root:root /init \
-	&& chmod +x /init
 
 WORKDIR /build
 VOLUME /build
