@@ -19,9 +19,12 @@ RUN apt-get update \
 	&& apt-get clean \
 	&& rm -rf \
 		/tmp/* \
+		/var/cache/debconf/*-old \
 		/var/lib/apt/lists/* \
-		/var/tmp/* \
-		/var/log/*
+		/var/lib/dpkg/status-old \
+		/var/lib/sgml-base/supercatalog.old \
+		/var/log/apt/term.log \
+		/var/tmp/*
 
 COPY root/ /
 RUN chown root:root /init \
