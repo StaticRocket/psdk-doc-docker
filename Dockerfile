@@ -7,6 +7,7 @@ RUN apt-get update \
 		gosu \
 		make \
 		python3-sphinx \
+		python3-sphinx-rtd-theme \
 		rstcheck \
 		zip \
 	&& echo "**** create abc user and make our folders ****" \
