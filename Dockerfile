@@ -4,10 +4,12 @@ RUN apt-get update \
 	&& DEBIAN_FRONTEND=noninteractive apt-get install -y \
 		--no-install-recommends \
 		dumb-init \
+		git \
 		gosu \
 		make \
 		python3-sphinx \
 		python3-sphinx-rtd-theme \
+		ripgrep \
 		rstcheck \
 		zip \
 	&& echo "**** create abc user and make our folders ****" \
