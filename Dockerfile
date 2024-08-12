@@ -9,6 +9,7 @@ RUN apt-get update \
 		make \
 		python3-sphinx \
 		python3-sphinx-rtd-theme \
+		python3-sphinx-tabs \
 		ripgrep \
 		rstcheck \
 		zip \
