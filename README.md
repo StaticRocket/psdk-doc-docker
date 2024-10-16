@@ -1,7 +1,7 @@
 # psdk-doc-docker
 
 A simple docker container to build
-[processor-sdk-doc](https://bitbucket.itg.ti.com/projects/PROCESSOR-SDK/repos/processor-sdk-doc).
+[processor-sdk-doc](https://github.com/TexasInstruments/processor-sdk-doc).
 
 
 ## Why
