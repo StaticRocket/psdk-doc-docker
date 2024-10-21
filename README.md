@@ -3,6 +3,10 @@
 A simple docker container to build
 [processor-sdk-doc](https://github.com/TexasInstruments/processor-sdk-doc).
 
+> [!IMPORTANT]
+> This repository is being phased out in favor of the integrated build container
+> at https://github.com/TexasInstruments/processor-sdk-doc/tree/master/docker
+
 
 ## Why
 
